@@ -24,6 +24,7 @@
     padding: 64px 24px 32px 24px;
     background-color: $green;
     position:relative;
+    overflow-x: hidden;
 
     .svg_absolute{
         width: 200px;

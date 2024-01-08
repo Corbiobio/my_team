@@ -18,8 +18,6 @@ $font:'Livvic', sans-serif;
 
 body{
     background-color: $primary_green;
-    overflow-x: hidden;
-
 }
 
 p{
@@ -33,6 +31,17 @@ p{
 
 span{
     color: $pink;
+}
+
+
+@mixin btn($color){
+    background-color: unset;
+    padding: 16px 32px;
+    font-size: 18px;
+    font-weight: 700;
+    color: $color;
+    border: 3px solid $color;
+    border-radius: 100px;
 }
 
 @mixin h1_large{
@@ -83,8 +92,61 @@ header{
         @include h1_small();
         font-size:32px;
     }
-    div{
+    .menu_burger{
         width: fit-content;
+
+        input{
+            display: none;
+        }
+        input:checked + nav{
+            display: flex;
+            height: 100vh;
+        }
+        nav{
+            display: none;
+            flex-direction: column;
+            padding: 64px 32px 0 96px;
+            background-color: $blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            height: 0;
+            width: 80%;
+            overflow: hidden;
+            z-index: 2;
+
+            label{
+                align-self: end;
+                height: 50px;
+                width: 50px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                a{
+                    font-size: 32px;
+                    text-decoration:none;
+                    color: $white;
+                    font-family:$font; 
+                }
+                button{
+                    @include btn($color:$white)
+                }
+            }
+            .svg_bottom_left{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translateX(50%);
+            }
+        }
     }
 }
 
@@ -104,13 +166,7 @@ footer{
             text-align: center;
         }
         button{
-            background-color: unset;
-            padding: 16px 32px;
-            font-size: 18px;
-            font-weight: 700;
-            color: $green;
-            border: 3px solid $green;
-            border-radius: 100px;
+            @include btn ($color:$green)
         }
         .svg_bottom_left{
             position: absolute;
