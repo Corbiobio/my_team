@@ -1,0 +1,141 @@
+.talent{
+    padding: 0 48px;
+
+    h2{
+        margin: 0 32px;
+        text-align: center;
+    }
+    p{
+        margin-top: 32px;
+        margin-bottom: 96px;
+    }
+}
+
+.svg_full_width{
+    display: flex;
+    justify-content: center;
+    img{    
+        width: 90%;
+        max-width: 500px;
+    }
+}
+
+.build{
+    padding: 64px 24px 32px 24px;
+    background-color: $green;
+    position:relative;
+
+    .svg_absolute{
+        width: 200px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(50%);
+    }
+
+    hr{
+        border: 2px solid $pink;
+        width: 75px;
+    }
+
+    h2{
+        font-size: 32px;
+        line-height: 32px;
+        width: 60%;
+        margin-top: 32px;
+    }
+
+    div{
+        margin-top: 64px;
+        article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            img{
+                width: 100px;
+            }
+            h3{
+                color: $pink;
+                text-align: center;
+            }
+        } 
+    }
+}
+
+.delivering{
+    padding: 128px 24px;
+    position: relative;
+    background-color: $light_green;
+    .svg_start{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 150px;
+    }
+
+    h2{
+        line-height: 32px;
+        font-size: 32px;
+        text-align: center;
+        margin-bottom: 64px;
+        span{
+            color: $light_blue;
+        }
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+        margin-top: 96px;
+        q{
+            @extend p;
+            display: block;
+            z-index: 1;
+            
+        }
+        h3{
+            margin-top: 32px;
+            text-align: center;
+            color: $light_blue;
+        }
+        .italique{
+            font-style: italic;
+            font-weight: 300;
+        }
+        .circle{
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            border: 2px solid $white;
+            margin-top: 12px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    article::before{
+        content: open-quote ;
+        font-family: $font;
+        color: $blue;
+        position: absolute;
+        font-size: 300px;
+        height: fit-content;
+        transform: translateY(-35%);
+    }
+    article::after{
+        content: close-quote ;
+        visibility: hidden;
+    }
+    .svg_bottom_right{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 100px;
+        width: 200px;
+    }
+}
