@@ -1,4 +1,7 @@
 .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     overflow: hidden;
     padding: 32px 48px 128px 48px;
@@ -94,5 +97,53 @@
     }
     .img_marque{
         width: 50%;
+    }
+}
+
+@media screen and (min-width:$breakpoint_tablette){
+    .about{
+        .svg_bottom_right{
+            transform: translateX(50%);
+        }
+        p{
+            max-width: 540px;
+        }
+    }
+
+    .meet{
+        padding: 96px 64px 64px 64px;
+        flex-wrap: wrap;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    
+        .svg_top_left{
+            transform: translateX(-50%);
+        }
+        
+        h2{
+            margin-bottom: 64px;
+            width: 100%;
+        }
+
+        article{
+            width: 47.5%;
+        }
+    }
+    .client{
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 96px 64px;
+        gap: 0;
+        .svg_top_left{
+            transform: translatey(-50%);
+        }
+        h2{
+            width: 100%;
+        }
+
+        .img_marque{
+            width: 15%;
+        }
     }
 }
