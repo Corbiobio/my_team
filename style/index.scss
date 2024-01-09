@@ -1,6 +1,8 @@
 .talent{
     padding: 0 48px;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     h2{
         margin: 0 32px;
         text-align: center;
@@ -8,6 +10,7 @@
     p{
         margin-top: 32px;
         margin-bottom: 96px;
+        max-width: 540px;
     }
 }
 
@@ -42,20 +45,28 @@
         margin-top: 32px;
     }
 
-    div{
+    .container{
+        display: flex;
+        flex-direction: column;
         margin-top: 64px;
+        gap: 32px;
+
         article{
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: 12px;
-            margin-bottom: 24px;
+            gap: 16px;
             img{
                 width: 100px;
             }
-            h3{
-                color: $pink;
-                text-align: center;
+            div{
+                display: flex;
+                flex-direction: column;
+                gap: 16px;
+                h3{
+                    color: $pink;
+                    text-align: center;
+                }
             }
         } 
     }
@@ -121,5 +132,27 @@
     article::after{
         content: close-quote ;
         visibility: hidden;
+    }
+}
+
+@media screen and (min-width:$breakpoint_tablette){
+    .talent h2{
+        font-size: 64px;
+        line-height:64px;
+    }
+
+    .build .container article{
+        flex-direction: row;
+        gap: 48px;
+        div h3,p{
+            text-align: start;
+        }
+    }
+
+    .delivering{
+        padding: 128px 64px;
+        article h3{
+            margin-top: 16px;
+        } 
     }
 }

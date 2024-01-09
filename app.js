@@ -34,26 +34,35 @@ if (footer) {
   </article>
   
   <article class="footer">
-  <h2>myteam</h2>
-  <nav>
-  <ul>
-  <li><a href="/home">home</a></li>
-  <li><a href="/about">about</a></li>
-  </ul>
-  </nav>
-  <p>
-  987  Hillcrest Lane <br>
-  Irvine, CA <br>
-  California 92714 <br>
-  Call Us : 949-833-7432 <br>
-  </p>
-  
-  <div>
-  <img src="/assets/icon-facebook.svg" alt="facebook">
-  <img src="/assets/icon-pinterest.svg" alt="pinterest">
-  <img src="/assets/icon-twitter.svg" alt="twitter">
+  <div class="container">
+    <h2>myteam</h2>
+      <nav>
+        <ul>
+          <li><a href="/home">home</a></li>
+          <li><a href="/about">about</a></li>
+        </ul>
+      </nav>
+  </div>
+
+  <div class="container">
+
+    <p>
+    987  Hillcrest Lane <br>
+    Irvine, CA <br>
+    California 92714 <br>
+    Call Us : 949-833-7432 <br>
+    </p>
   </div>
   
+  <div class="container container_reseau">
+    <div class="reseau">
+      <img src="/assets/icon-facebook.svg" alt="facebook">
+      <img src="/assets/icon-pinterest.svg" alt="pinterest">
+      <img src="/assets/icon-twitter.svg" alt="twitter">
+    </div>
+  
   <p>Copyright 2020. All Rights Reserved</p>
+  </div>
+  
   </article>`
 }

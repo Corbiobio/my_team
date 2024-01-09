@@ -1,48 +1,54 @@
-footer{
-    .ready{
-        background-color: $pink;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 128px 0;
-        position: relative;
-        gap: 32px;
-
-        h2{
-            color:$green;
-            text-align: center;
-        }
-        a{
-            @include btn ($color:$green)
-        }
+.ready{
+    background-color: $pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 128px 0;
+    position: relative;
+    gap: 32px;
+    h2{
+        color:$green;
+        text-align: center;
     }
-    
-    .footer{
-        background-color: $dark_green;
+    a{
+        @include btn ($color:$green)
+    }
+}
+
+.footer{
+    background-color: $dark_green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 64px;
+    gap: 32px;
+    .container{
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 64px;
         gap: 32px;
-
+    
         h2{
             font-size: 32px;
         }
-
         p{
             color: #2C6269;
         }
-
-        div{
+        .reseau{
             display: flex;
             gap: 32px;
+            justify-content: center;
+        }
+
+        img{
+            height: 32px;
+            width: 32px;
         }
 
         ul{
             display: flex;
             flex-direction: row;
-            gap: 32px;
+            justify-content: space-between;
             li{
                 list-style: none;
                 a{
@@ -51,6 +57,36 @@ footer{
                     font-family:$font; 
                 }
             }
+        }
+    }
+}
+    
+    @media screen and (min-width:$breakpoint_tablette){
+        .ready{
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding:96px 64px;
+        gap: 0;
+
+        h2{
+            font-size: 32px;
+        }
+    }
+
+    .footer{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 32px;
+
+        p{
+            text-align: end;
+        }
+
+        .container_reseau{
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
         }
     }
 }

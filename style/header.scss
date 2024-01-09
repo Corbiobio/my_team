@@ -65,3 +65,48 @@ header{
         }
     }
 }
+
+@media screen and (min-width:$breakpoint_tablette){
+    header{
+        justify-content: normal;
+        label,img{
+            display: none;
+        }
+        .menu_burger {
+            width: 100%;
+            nav{
+                display: block;
+                position: static;
+                padding: 0;
+                height: fit-content;
+                width: 100%;
+                background-color: unset;
+
+                ul{
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: start;
+                    padding: 0 5%;
+
+                    li{
+                        height: fit-content;
+                    }
+                        :nth-child(3){ 
+                        width: 100%;
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: end;
+                            .btn{
+                                display: block;
+                                width: fit-content;
+                                padding: 8px 16px;
+                            }
+                        } 
+                }
+            }
+             input:checked + nav{
+                display: block;
+            }
+        }
+    } 
+}
