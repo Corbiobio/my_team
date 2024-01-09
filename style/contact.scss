@@ -25,6 +25,7 @@
         div{
             display: flex;
             flex-direction: row;
+            align-items: center;
             gap: 16px;
             img{
                 width: 64px;
@@ -35,6 +36,7 @@
                 @extend p;
                 text-align: start;
                 font-weight: 700;
+                height: fit-content;
             } 
         }
     }
@@ -86,6 +88,21 @@
 
         .svg_bottom_right{
             transform: translateX(50%);
+        }
+    }
+}
+
+@media screen and (min-width:$breakpoint_pc){
+    .contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        .container_ask .container{
+            flex-direction: column;
+        }
+        form{
+            width: 
+            40%;
         }
     }
 }
