@@ -1,0 +1,67 @@
+.contact{
+    position: relative;
+    overflow: hidden;
+    padding: 32px 32px 128px 32px;
+    h2{
+        text-align: center;
+        margin-bottom: 64px;
+        span{
+            font-size: 32px;
+        }
+    }
+
+    .container{
+        margin-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        div{
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            img{
+                width: 64px;
+                height: 64px;
+            }
+            
+            strong{
+                @extend p;
+                text-align: start;
+                font-weight: 700;
+            } 
+        }
+    }
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        input[type="text"],textarea{
+            background-color: unset;
+            border: none;
+            border-bottom: 1px solid $white;
+            padding: 16px ;
+            color: $light_blue;
+            resize: none;
+            width: 100%;
+        }
+        input[type="text"]::placeholder,textarea::placeholder{
+            color: $light_blue;
+        }
+
+        input[type="submit"]{
+            @include btn($white);
+            width: fit-content;
+            margin-top: 32px;
+            background-color: $white;
+            color: $blue;
+            cursor: pointer;
+        }
+    }
+
+    .svg_bottom_right{
+        transform: translateX(50%) translateY(50%);
+    }
+}

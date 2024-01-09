@@ -12,7 +12,7 @@ footer{
             color:$green;
             text-align: center;
         }
-        button{
+        a{
             @include btn ($color:$green)
         }
     }

@@ -42,6 +42,8 @@ span{
     color: $color;
     border: 3px solid $color;
     border-radius: 100px;
+    font-family: $font;
+    text-decoration: none;
 }
 
 @mixin h1_large{
@@ -107,3 +109,4 @@ h3{
 @import "footer.scss" ;
 @import "index.scss" ;
 @import "about.scss" ;
+@import "contact.scss" ;
