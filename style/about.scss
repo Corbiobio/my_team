@@ -43,7 +43,7 @@
         align-items: center;
         flex-direction: column;
         gap: 16px;
-        padding: 64px 0;
+        padding: 64px 96px;
         position: relative;
         margin-bottom: 64px;
 
@@ -68,8 +68,48 @@
                 height: 100%;
             }
         }
+        .citation{
+            display: none;
+        }
 
-        button{
+        .reseau{
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0 30%;
+            display: none;
+
+            img:hover{
+                filter: brightness(0) saturate(100%) invert(84%) sepia(48%) saturate(4213%) hue-rotate(309deg) brightness(90%) contrast(102%);
+                cursor: pointer;
+            }
+        }
+
+        input{
+            display: none;
+        }
+
+        .cross_close{
+            display: none;
+            filter: brightness(0) saturate(100%) invert(15%) sepia(50%) saturate(839%) hue-rotate(138deg) brightness(95%) contrast(104%);
+        }
+
+        // remove photo text and +
+        input:checked ~ .circle,input:checked ~ p,input:checked ~ label img.cross_open{
+            display: none;
+        }
+
+        //show citation and reseau
+        input:checked ~ .citation,input:checked ~ .reseau{
+            display: flex;
+        }
+
+        //show x
+        input:checked ~ label img.cross_close{
+            display: block;
+        }
+
+        .btn{
             position: absolute;
             background-color: $pink;
             border-radius: 50%;
@@ -78,7 +118,14 @@
             height: 50px;
             width: 50px;
             transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
         }
+        .btn:hover{
+            background-color: $light_blue;
+        }   
     }
 }
 
@@ -134,6 +181,7 @@
 
         article{
             width: 47.5%;
+            padding: 64px 16px;
         }
     }
     .client{
@@ -186,6 +234,7 @@
         }
         article{
             width: 30%;
+            padding: 64px ;
         }
     }
 

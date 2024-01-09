@@ -26,13 +26,17 @@ if (header) {
  
 if (footer) {
   
-  footer.innerHTML += `  <article class="ready">
-  <h2>Ready to get started?</h2>
-  <a href="/contact">contact us</a>
-  
-  <img class="svg_bottom_left" src="/assets/bg-pattern-home-6-about-5.svg" alt="svg">
-  </article>
-  
+  //if not in contact page add a part
+  if (!window.location.href.includes("contact")) {
+    footer.innerHTML += `<article class="ready">
+    <h2>Ready to get started?</h2>
+    <a href="/contact">contact us</a>
+    
+    <img class="svg_bottom_left" src="/assets/bg-pattern-home-6-about-5.svg" alt="svg">
+    </article>`
+  }
+
+  footer.innerHTML += `
   <article class="footer">
   <div class="container">
     <h2>myteam</h2>
