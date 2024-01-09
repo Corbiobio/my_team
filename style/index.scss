@@ -141,11 +141,15 @@
         line-height:64px;
     }
 
-    .build .container article{
-        flex-direction: row;
-        gap: 48px;
-        div h3,p{
-            text-align: start;
+    .build {
+        padding: 64px;
+
+        .container article{
+            flex-direction: row;
+            gap: 48px;
+            div h3,p{
+                text-align: start;
+            }
         }
     }
 
