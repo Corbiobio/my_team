@@ -1,0 +1,67 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0 24px;
+    margin: 48px 0 60px 0;
+
+    h1{
+        width: fit-content;
+        @include h1_small();
+        font-size:32px;
+    }
+    .menu_burger{
+        width: fit-content;
+
+        input{
+            display: none;
+        }
+        input:checked + nav{
+            display: flex;
+            height: 100vh;
+        }
+        nav{
+            display: none;
+            flex-direction: column;
+            padding: 64px 32px 0 96px;
+            background-color: $blue;
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: none;
+            height: 0;
+            width: 80%;
+            overflow: hidden;
+            z-index: 2;
+
+            label{
+                align-self: end;
+                height: 50px;
+                width: 50px;
+                img{
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 50px;
+                a{
+                    font-size: 32px;
+                    text-decoration:none;
+                    color: $white;
+                    font-family:$font; 
+                }
+                button{
+                    @include btn($color:$white)
+                }
+            }
+            .svg_bottom_right{
+                transform: translateX(50%);
+            }
+        }
+    }
+}

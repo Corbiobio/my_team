@@ -1,0 +1,56 @@
+footer{
+    .ready{
+        background-color: $pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 128px 0;
+        position: relative;
+        gap: 32px;
+
+        h2{
+            color:$green;
+            text-align: center;
+        }
+        button{
+            @include btn ($color:$green)
+        }
+    }
+    
+    .footer{
+        background-color: $dark_green;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 64px;
+        gap: 32px;
+
+        h2{
+            font-size: 32px;
+        }
+
+        p{
+            color: #2C6269;
+        }
+
+        div{
+            display: flex;
+            gap: 32px;
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            gap: 32px;
+            li{
+                list-style: none;
+                a{
+                    text-decoration:none;
+                    color: $white;
+                    font-family:$font; 
+                }
+            }
+        }
+    }
+}
