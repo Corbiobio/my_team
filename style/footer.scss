@@ -61,32 +61,47 @@
     }
 }
     
-    @media screen and (min-width:$breakpoint_tablette){
-        .ready{
-        flex-direction: row;
-        justify-content: space-evenly;
-        padding:96px 64px;
-        gap: 0;
-
+@media screen and (min-width:$breakpoint_tablette){
+    .ready{
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding:96px 64px;
+    gap: 0;
         h2{
             font-size: 32px;
         }
     }
-
     .footer{
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         gap: 32px;
-
+        
         p{
             text-align: end;
         }
-
         .container_reseau{
             flex-direction: row;
             justify-content: space-between;
             width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width:$breakpoint_pc){
+    .footer{
+        flex-direction: row;
+        padding: 64px 256px;
+
+        .container p{
+            text-align: start;
+        }
+        .container_reseau{
+            flex-direction: column;
+            width: fit-content;
+            .reseau{
+                justify-content: end;
+            }
         }
     }
 }

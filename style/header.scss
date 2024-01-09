@@ -113,3 +113,9 @@ header{
         }
     } 
 }
+
+@media screen and (min-width:$breakpoint_pc){
+    header {
+        padding: 0 96px;
+    }
+}
