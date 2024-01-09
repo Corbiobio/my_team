@@ -8,7 +8,13 @@
     h2{
         text-align: center;  
         margin-bottom: 32px;
-    } 
+    }
+    
+    //only display in pc
+    hr{
+        display: none;
+    }
+
     .svg_bottom_right{
         transform: translateY(50%) translateX(50%);
     }
@@ -144,6 +150,50 @@
 
         .img_marque{
             width: 15%;
+        }
+    }
+}
+
+
+@media screen and (min-width:$breakpoint_pc){
+    .about{
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 64px 128px;
+
+        h2{
+            font-size: 64px;
+        }
+
+        div{
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+            hr{
+                display: block;
+                width: 64px;
+                border: 2px solid $pink;
+            }
+            p{
+                text-align: start;
+            }
+        }
+    }
+    .meet{
+        padding: 128px;
+        h2{
+            font-size:48px ;
+        }
+        article{
+            width: 30%;
+        }
+    }
+
+    .client{
+        padding: 128px 64px;
+
+        .svg_top_left{
+            transform: none;
         }
     }
 }
