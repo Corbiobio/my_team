@@ -58,6 +58,10 @@ header{
                 .btn{
                     @include btn($color:$white)
                 }
+                .btn:hover{
+                    background-color: $white;
+                    color:$green;
+                }
             }
             .svg_bottom_right{
                 transform: translateX(50%);

@@ -55,8 +55,23 @@
             resize: none;
             width: 100%;
         }
+
+        input[type="text"]:focus-visible,textarea:focus-visible{
+            outline: none;
+        }
+
         input[type="text"]::placeholder,textarea::placeholder{
             color: $light_blue;
+        }
+
+        //input and text area on hover and placeholder
+        input[type="text"]:hover,input[type="text"]:hover::placeholder,textarea:hover,textarea:hover::placeholder{   
+            color:$white;
+            border-bottom-color: $light_blue;
+        }
+
+        input[type="text"]:user-invalid,textarea:user-invalid{
+            border-bottom-color: $pink;
         }
 
         input[type="submit"]{

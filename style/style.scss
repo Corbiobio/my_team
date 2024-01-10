@@ -1,5 +1,7 @@
+//font
 @import url('https://fonts.googleapis.com/css2?family=Livvic:wght@300;500;700&display=swap');
 
+//color
 $pink:#F67E7E;
 $primary_green: #014E56;
 $dark_green: #002529;
@@ -10,6 +12,7 @@ $light_blue: #79C8C7;
 $white: #FFFFFF;
 $font:'Livvic', sans-serif;
 
+//breakpoint
 $breakpoint_tablette:650px;
 $breakpoint_pc:1050px;
 
@@ -35,7 +38,6 @@ p{
 span{
     color: $pink;
 }
-
 
 @mixin btn($color){
     background-color: unset;
@@ -106,7 +108,6 @@ h3{
     bottom: 0;
     left: 0;
 }
-
 
 @import "header.scss" ;
 @import "footer.scss" ;
